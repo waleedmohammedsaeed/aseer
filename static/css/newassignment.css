@@ -1,0 +1,11 @@
+.mytable{
+    margin: 100px;
+    width: 70%;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.mytable tr{
+    border-bottom: 2px solid lightgray;
+    padding: 20px;
+}

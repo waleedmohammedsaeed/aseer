@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+
+body{
+    direction: rtl;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Cairo,'Noto Kufi Arabic', sans-serif;
+    min-height: 100vh;
+}
+
+.title, h2{
+    color: white;
+}
+
+.noto-kufi-arabic-fo {
+    font-family: "Noto Kufi Arabic", serif;
+    font-style: normal;
+}
+
+.cairo{
+    font-family: "Cairo", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+   font-variation-settings: "slnt" 0;
+}
+
+.navbar{
+    /*background-color: rgb(13 148 136 );*/
+    background-color: #0891B2;
+    padding: 15px 500px;
+    padding-block: 50px;
+    writing-mode: horizontal-tb;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar section{
+
+}
+
+.navbar>ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+    color: white;
+    position: relative;
+    top: 9px;
+}
+
+
+
+.navbar>ul>a{
+    text-decoration: none;
+    color: white;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.bg{
+    height: 92vh;
+    margin: auto
+}
+
+a{
+    text-decoration: none;
+}
+

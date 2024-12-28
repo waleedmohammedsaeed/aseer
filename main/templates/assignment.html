@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block container %}
+<link rel="stylesheet" href="{% static 'css/assign.css' %}">
+<section class="body">
+    <div class="bg">
+        <div class="info">
+            <div class="bars">
+                <div class="assign-header">
+                    <div>
+                        <div>اوامر التكليف</div>
+                        <div>18</div>
+                    </div>
+                    <div>
+                        <div>قرارات التكليف المنتهية</div>
+                        <div>6</div>
+                    </div>
+                    <div>
+                        <div>اوامر التكليف المنتهية</div>
+                        <div>12</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="commands">
+            <a href="{% url 'newassignment' %}">تكليف جديد +</a>
+            <a href="{% url 'newassignment' %}">مباشرة جديدة +</a>
+            <a href="{% url 'newassignment' %}"> عرض الموظفين المكلفين</a>
+            <a href="{% url 'newassignment' %}">عرض قرارات التكليف المنتهية</a>
+            <a href="{% url 'newassignment' %}">عرض المباشرة بعد التكليف</a>
+        </div>
+        {% block assignment %}
+        {% endblock %}
+
+    </div>
+</section>
+
+
+{% endblock %}
