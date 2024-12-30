@@ -24,4 +24,4 @@ def usersmanagement(request):
     return render(request, 'usersmanagement.html')
 
 def newassignment(request):
-    return render(request, 'assignments/newassignment.html')
+    return render(request, "assign/newassignment.html")

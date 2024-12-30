@@ -1,39 +1,60 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block container %}
-<link rel="stylesheet" href="{% static 'css/assign.css' %}">
-<section class="body">
-    <div class="bg">
-        <div class="info">
-            <div class="bars">
-                <div class="assign-header">
-                    <div>
-                        <div>اوامر التكليف</div>
-                        <div>18</div>
-                    </div>
-                    <div>
-                        <div>قرارات التكليف المنتهية</div>
-                        <div>6</div>
-                    </div>
-                    <div>
-                        <div>اوامر التكليف المنتهية</div>
-                        <div>12</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="commands">
-            <a href="{% url 'newassignment' %}">تكليف جديد +</a>
-            <a href="{% url 'newassignment' %}">مباشرة جديدة +</a>
-            <a href="{% url 'newassignment' %}"> عرض الموظفين المكلفين</a>
-            <a href="{% url 'newassignment' %}">عرض قرارات التكليف المنتهية</a>
-            <a href="{% url 'newassignment' %}">عرض المباشرة بعد التكليف</a>
-        </div>
-        {% block assignment %}
-        {% endblock %}
-
+<link rel="stylesheet" href="{% static 'css/ass.css' %}">
+<section class="container">
+    <a href="{% url 'newassignment' %}">تكليف جديد</a>
+<div>
+    <div class="tab-box">
+        <button class='tab-btn active'>الموطفين المكلفين</button>
+        <button class='tab-btn'>قرارات التكليف المنتهية</button>
+        <button class='tab-btn'>عرض النباشرى بعد التكليف</button>
+        <div class="line"></div>
     </div>
+    <div class="content-box">
+        <div class="content active ">
+            <h2>الموطفين المكلفين</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veniam perferendis quos doloribus qui molestias laboriosam nemo maiores quod.
+                Optio, possimus quidem culpa nesciunt eius debitis nobis asperiores inventore
+                laboriosam, rerum illo nisi ratione repellendus delectus iure dolorum provident
+                neque ducimus corrupti soluta esse exercitationem. Praesentium maxime vel vero,
+                quisquam doloremque minus ipsum voluptatum nam rerum esse doloribus? Minima
+                officiis facere aut, asperiores deleniti cum laudantium quae sint ea impedit
+                deserunt obcaecati, corrupti quisquam eius assumenda, tempora eveniet maxime! Ad
+                blanditiis magnam, sequi possimus quaerat illum, at itaque voluptate labore autem
+                accusamus. Ad odio quia sit distinctio ex! Magnam, voluptatum qui debitis ducimus
+                unde possimus architecto nobis inventore laborum, odio id cumque rerum explicabo
+                suscipit. Vero tempore voluptatibus distinctio eaque in totam autem perspiciatis,
+                aliquam cum, aliquid neque, nostrum nihil unde aperiam mollitia odit sit
+                quaerat. Omnis ducimus facilis porro deserunt earum sapiente debitis! Magni
+                perspiciatis numquam maiores alias animi deserunt vitae? Aut vitae vel maxime
+                expedita amet laborum aspernatur impedit, in nulla ab velit magnam architecto,
+                modi cumque dolores beatae fugiat. Et dolorem vero nobis, delectus odio suscipit
+                molestias numquam obcaecati esse illo consectetur consequuntur aliquid
+                voluptatum assumenda quam doloribus asperiores facilis quo repudiandae dolorum
+                velit maiores corporis! Molestias, hic.
+            </p>
+        </div>
+        <div class="content">
+            <h2>قرارات التكليف المنتهية</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis corporis, laudantium veritatis dolore enim officia quam nihil impedit delectus ex!
+            </p>
+        </div>
+        <div class="content">
+            <h2>عرض النباشرى بعد التكليف</h2>
+            <p>
+                Lorem ipsum dolor sit amet
+
+            </p>
+        </div>
+    </div>
+</div>
 </section>
+
+<script src="{% static 'js/main.js' %}"></script>
 
 
 {% endblock %}
