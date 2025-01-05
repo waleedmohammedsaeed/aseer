@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block container %}
+<link rel="stylesheet" href="{% static 'css/hr/employees.css' %}">
+<div class="bg">
+    <h1 style="text-align: center">الموارد البشرية</h1>
+    <h3 style="text-align: center">شؤون الموظفين</h3>
+    <div class="btn-groups border" role="group" aria-label="Basic example">
+        <a href="{% url 'hr:newemployee' %}" type="button" class="btn border-none">اضافة موظف</a>
+<!--        <a href="" type="button" class="btn btn-warning border-none">اضافة موظفين </a>-->
+    </div>
+    <hr>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="م" class="bg-secondary text-white">#</th>
+            <th scope="col" class="bg-secondary text-white">الاسم</th>
+            <th scope="col" class="bg-secondary text-white">الجنسية</th>
+            <th scope="col" class="bg-secondary text-white">المرتبة</th>
+            <th scope="col" class="bg-secondary text-white">اخر واقعة</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for employee in employees %}
+        <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{employee.ename}}</td>
+            <td>{{employee.nationality }}</td>
+            <td>{{employee.rank }}</td>
+            <td>{{employee.last_action }}</td>
+        </tr>
+        {% endfor %}
+
+        <div class="pagination">
+            <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1">&laquo; first</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                {% endif %}
+    
+                <span class="current">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                </span>
+    
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">next</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+
+            </tbody>
+            </table>
+</div>
+
+{% endblock %}

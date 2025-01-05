@@ -5,8 +5,8 @@ from django.shortcuts import render
 def main(request):
     return render(request, 'mainpage.html')
 
-def hr(request):
-    return render(request, 'hr.html')
+# def hr(request):
+#     return render(request, 'hr/hr.html')
 
 def payroll(request):
     return render(request, 'payroll.html')

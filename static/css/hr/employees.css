@@ -1,0 +1,14 @@
+.bg{
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px 0;
+    margin_bottom: 100px;
+}
+
+.btn-groups{
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid lightgray;
+    display: inline-block;
+    width: auto;
+}

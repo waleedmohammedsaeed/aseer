@@ -1,0 +1,19 @@
+.content-box .content{
+    padding: 20px;
+    display: none;
+}
+
+.content-box .content.active{
+    display: block
+}
+
+.line{
+    position: absolute;
+    /* top: 32px;
+    left: 25px; */
+    width: 100px;
+    height: 3px;
+    background-color:steelblue;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}

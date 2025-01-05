@@ -1,0 +1,18 @@
+.inputs{
+    border: 2px solid #eee;
+    outline-width: 1px;
+
+}
+
+.inputs:focus {
+    outline: none;
+    /* outline-width: 1px !important;
+    outline-color: lightblue !important;
+    outline-style: solid !important; */
+}
+
+
+.btn-null{
+    background-color: #fff;
+    border: none !important;
+}

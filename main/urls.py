@@ -1,9 +1,13 @@
 from django.urls import path
+
+from hr.urls import app_name
 from . import views
+
+app_name = "main"
 
 urlpatterns = [
     path('', views.main, name='main'),
-    path('hr/', views.hr, name='hr'),
+    # path('hr/', views.hr, name='hr'),
     path('payroll/', views.payroll, name='payroll'),
     path('assignment/', views.assignment, name='assignment'),
     path('jobs/', views.jobs, name='jobs'),
